@@ -10,11 +10,11 @@ public class Pizza {
         this.isVeg = isVeg;
         // your code goes here
         if(isVeg){
-            bill += "Base Price Of The Pizza: 300 \n";
+            bill = "Base Price Of The Pizza: 300 \n";
             price += 300;
         }
         else{
-            bill += "Base Price Of The Pizza: 400 \n";
+            bill = "Base Price Of The Pizza: 400 \n";
             price += 400;
         }
     }
