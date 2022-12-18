@@ -11,15 +11,17 @@ public class Pizza {
 
     private boolean paperBag = false;
 
+    private boolean isBill = false;
+
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         // your code goes here
         if(isVeg){
-            bill = "Base Price Of The Pizza: 300 \n";
+            bill = "Base Price Of The Pizza: 300\n";
             price += 300;
         }
         else{
-            bill = "Base Price Of The Pizza: 400 \n";
+            bill = "Base Price Of The Pizza: 400\n";
             price += 400;
         }
     }
@@ -31,7 +33,7 @@ public class Pizza {
     public void addExtraCheese(){
         // your code goes here
         if(!cheese){
-            bill += "Extra Cheese Added: 80 \n";
+            bill += "Extra Cheese Added: 80\n";
             price += 80;
             cheese = true;
         }
@@ -41,12 +43,12 @@ public class Pizza {
     public void addExtraToppings(){
         // your code goes here
         if(isVeg && !topping && cheese){
-            bill += "Extra Toppings Added: 70 \n";
+            bill += "Extra Toppings Added: 70\n";
             price += 70;
             topping = true;
         }
         else if(!isVeg && !topping && cheese){
-            bill += "Extra Toppings Added: 120 \n";
+            bill += "Extra Toppings Added: 120\n";
             price += 120;
             topping = true;
         }
@@ -56,7 +58,7 @@ public class Pizza {
         // your code goes here
 
         if(!paperBag){
-            bill += "Paperbag Added: 20 \n";
+            bill += "Paperbag Added: 20\n";
             price += 20;
             paperBag = true;
         }
@@ -65,7 +67,11 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
-        bill += "Total Price: "+String.valueOf(price);
+
+        bill += "Total Price: "+String.valueOf(price) + "\n";
+
         return this.bill;
+
+
     }
 }
